@@ -1,17 +1,12 @@
-import { WebPlugin } from '@capacitor/core';
+import { WebPlugin } from "@capacitor/core";
 export class ZipPluginWeb extends WebPlugin {
     constructor() {
-        super({
-            name: 'ZipPlugin',
-            platforms: ['web']
-        });
+        super();
     }
     zip(options) {
-        console.log(options);
         return Promise.resolve({ path: options.destination });
     }
     unZip(options) {
-        console.log(options);
         return Promise.resolve({ path: options.destination });
     }
 }
